@@ -70,7 +70,7 @@ function Ticket({ setTicketState }: StepProperties) {
     return null;
 
   return (
-    <div className="w-full flex flex-col justify-start items-start gap-8 border-border rounded-2xl bg-[#08252B] animate-in-view">
+    <div className="w-full flex flex-col justify-start items-start gap-8 rounded-2xl animate-in-view">
       <div className="w-full flex flex-col justify-center items-center gap-4 text-center">
         <h3 className="text-[32px] leading-[41px]">Your Ticket is Booked</h3>
         <p>You can download or Check your email for a copy</p>

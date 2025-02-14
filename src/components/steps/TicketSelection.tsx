@@ -73,7 +73,7 @@ function TicketSelection({ setTicketState, ticketState }: StepProperties) {
 
   return (
     <form
-      className="w-full flex flex-col justify-start items-start gap-8 border-border-primary border-[1px] rounded-[32px] p-6 animate-in-view"
+      className="w-full flex flex-col justify-start items-start gap-8 border-border-primary border-[1px] rounded-[32px] p-6 bg-[#08252B] animate-in-view"
       onSubmit={handleSubmit(onSubmit)}
     >
       <div className="w-full bg-hero py-4 px-6 rounded-3xl border-border border-2 border-t-0 backdrop-blur-[14px] flex flex-col justify-start items-center gap-3 text-center sm:py-6">
