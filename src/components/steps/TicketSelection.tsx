@@ -73,7 +73,7 @@ function TicketSelection({ setTicketState, ticketState }: StepProperties) {
 
   return (
     <form
-      className="w-full flex flex-col justify-start items-start gap-8 animate-in-view"
+      className="w-full flex flex-col justify-start items-start gap-8 border-border-primary border-[1px] rounded-[32px] p-6 animate-in-view"
       onSubmit={handleSubmit(onSubmit)}
     >
       <div className="w-full bg-hero py-4 px-6 rounded-3xl border-border border-2 border-t-0 backdrop-blur-[14px] flex flex-col justify-start items-center gap-3 text-center sm:py-6">
@@ -99,7 +99,7 @@ function TicketSelection({ setTicketState, ticketState }: StepProperties) {
       <div className="w-full flex flex-col justify-start items-start gap-2">
         <p className="text-base">Select Ticket Type:</p>
         <div className="w-full p-4 rounded-3xl border-border border-[1px]">
-          <div className="w-full flex flex-col justify-between items-center gap-6 sm:flex-row sm:flex-wrap">
+          <div className="w-full flex flex-col justify-between items-center gap-6 p-4 sm:flex-row bg-[#052228]">
             {availableTickets.map((ticket, i) => (
               <div
                 key={i + 1}
@@ -111,7 +111,7 @@ function TicketSelection({ setTicketState, ticketState }: StepProperties) {
                   !(ticketState?.ticketType === ticket.ticketType)
                     ? "hover:bg-border-primary/20"
                     : ""
-                } w-full flex justify-between items-center gap-2 p-2 rounded-xl border-border border-[1px] cursor-pointer sm:w-auto sm:min-w-[158px]`}
+                } w-full flex justify-between items-center gap-2 p-2 rounded-xl border-border border-[1px] cursor-pointer sm:max-w-[158px]`}
                 onClick={() =>
                   setTicketState((prevState) => {
                     return { ...prevState, ticketType: ticket.ticketType };
@@ -126,7 +126,9 @@ function TicketSelection({ setTicketState, ticketState }: StepProperties) {
                   </p>
                   <div className="flex flex-col justify-start items-start gap-1">
                     <p className="uppercase text-base">{ticket.name}</p>
-                    <p className="text-sm">{ticket.remains} left!</p>
+                    <p className="text-sm text-[#D9D9D9]">
+                      {ticket.remains}/52
+                    </p>
                   </div>
                 </div>
               </div>

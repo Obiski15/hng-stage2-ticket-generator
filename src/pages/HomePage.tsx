@@ -20,11 +20,11 @@ function HomePage() {
     );
 
   return (
-    <div className="px-5 pt-3 pb-5">
+    <div className="flex flex-col justify-start items-start gap-12 px-5 pt-3 pb-5 sm:gap-20">
       <Header />
 
-      <main className="max-w-[700px] mx-auto">
-        <div className="p-5 mt-5 flex flex-col justify-start items-start gap-8 border-border rounded-2xl bg-[#08252B] sm:p-12">
+      <main className="w-full max-w-[700px] mx-auto border-border-primary border-[1px] rounded-[32px] py-8 px-6 sm:p-12">
+        <div className="mt-5 flex flex-col justify-start items-start gap-8 border-border rounded-2xl">
           <SectionTitle step={ticketState.step} />
 
           <div className="w-full max-w-[calc(700px-96px)]">
